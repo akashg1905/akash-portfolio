@@ -1,105 +1,147 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Akash Gondhale | Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <style>
     html { scroll-behavior: smooth; }
-    .skill-item:hover { background-color: #6366f1; color: white; transform: scale(1.05); transition: all 0.3s ease; }
-    .card:hover { transform: translateY(-5px); transition: all 0.3s ease; box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); }
-    .icon-animate:hover { transform: scale(1.2); transition: transform 0.3s; }
+    .skill:hover { transform: scale(1.05); transition: 0.3s; }
+    .card:hover { transform: translateY(-4px); transition: all 0.3s ease; box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+    .icon-animate:hover { transform: scale(1.15); transition: 0.3s ease-in-out; }
   </style>
 </head>
-<body class="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white font-sans">
+<body class="bg-gradient-to-br from-gray-900 via-indigo-900 to-purple-900 text-white">
 
   <!-- Navigation -->
-  <nav class="flex justify-between items-center p-5 sticky top-0 bg-opacity-80 bg-gray-900 z-50">
-    <h1 class="text-xl font-bold">Akash Gondhale</h1>
+  <nav class="flex justify-between items-center p-4 fixed top-0 w-full z-50 bg-gray-900 bg-opacity-90 shadow-lg">
+    <h1 class="text-xl font-bold text-pink-500">Akash Gondhale</h1>
     <ul class="flex gap-6 text-sm">
-      <li><a href="#skills" class="hover:underline">Skills</a></li>
-      <li><a href="#experience" class="hover:underline">Experience</a></li>
-      <li><a href="#education" class="hover:underline">Education</a></li>
-      <li><a href="#contact" class="hover:underline">Contact</a></li>
+      <li><a href="#home" class="hover:text-pink-400">Home</a></li>
+      <li><a href="#about" class="hover:text-pink-400">About</a></li>
+      <li><a href="#experience" class="hover:text-pink-400">Experience</a></li>
+      <li><a href="#achievements" class="hover:text-pink-400">Achievements</a></li>
+      <li><a href="#contact" class="hover:text-pink-400">Contact</a></li>
     </ul>
   </nav>
 
   <!-- Hero -->
-  <section class="min-h-screen flex flex-col justify-center items-center text-center px-4">
-    <h1 class="text-5xl font-bold mb-4" data-aos="fade-up">Hi, I'm Akash Gondhale</h1>
-    <p class="text-lg max-w-xl" data-aos="fade-up" data-aos-delay="200">
-      Senior Software Engineer with 5+ years of experience in scalable API development, Python, and GCP solutions.
+  <section id="home" class="min-h-screen flex flex-col justify-center items-center text-center px-4 pt-24">
+    <img src="https://i.ibb.co/1XcZr1r/avatar.png" alt="avatar" class="w-32 h-32 rounded-full shadow-lg mb-4"/>
+    <h1 class="text-5xl font-extrabold text-pink-500" data-aos="fade-up">Akash Gondhale</h1>
+    <p class="text-lg text-blue-400 font-medium" data-aos="fade-up" data-aos-delay="150">Senior Software Engineer</p>
+    <p class="max-w-2xl mt-4 text-white" data-aos="fade-up" data-aos-delay="250">
+      Results-driven Backend Developer with 5+ years of experience in APIs, cloud, and automation. Passionate about building maintainable, scalable solutions.
     </p>
-    <div class="mt-6 flex space-x-4" data-aos="fade-up" data-aos-delay="300">
-      <a href="#contact" class="bg-white text-indigo-700 font-semibold py-2 px-4 rounded-full hover:bg-gray-100">Contact Me</a>
-      <a href="#experience" class="border border-white py-2 px-4 rounded-full hover:bg-white hover:text-indigo-700">View Experience</a>
-    </div>
   </section>
 
-  <!-- Skills -->
-  <section id="skills" class="py-16 px-6 bg-white text-gray-800">
-    <h2 class="text-3xl font-bold text-center mb-6">Skills</h2>
-    <div class="flex flex-wrap justify-center gap-4 text-sm">
-      <span class="skill-item bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Python</span>
-      <span class="skill-item bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Django</span>
-      <span class="skill-item bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">FastAPI</span>
-      <span class="skill-item bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">GCP</span>
-      <span class="skill-item bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Docker</span>
-      <span class="skill-item bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">Vue.js</span>
-      <span class="skill-item bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">MongoDB</span>
+  <!-- About & Skills -->
+  <section id="about" class="py-16 px-4 bg-black bg-opacity-30">
+    <div class="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 items-start">
+      <div data-aos="fade-right">
+        <h2 class="text-3xl font-bold text-pink-500 mb-4">About Me</h2>
+        <p class="text-white leading-relaxed">
+          I'm a Backend Developer with extensive experience in scalable APIs and cloud systems across fintech, e-commerce, and PLM.
+          Skilled in Python frameworks and GCP, passionate about technical excellence and real-world results.
+        </p>
+      </div>
+      <div data-aos="fade-left">
+        <h3 class="text-xl font-bold text-pink-500 mb-2">Skills</h3>
+        <div class="flex flex-wrap gap-3">
+          <span class="skill bg-gray-700 px-3 py-1 rounded-full">Python</span>
+          <span class="skill bg-gray-700 px-3 py-1 rounded-full">Django</span>
+          <span class="skill bg-gray-700 px-3 py-1 rounded-full">FastAPI</span>
+          <span class="skill bg-gray-700 px-3 py-1 rounded-full">GCP</span>
+          <span class="skill bg-gray-700 px-3 py-1 rounded-full">Docker</span>
+          <span class="skill bg-gray-700 px-3 py-1 rounded-full">Vue.js</span>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Experience -->
-  <section id="experience" class="py-16 px-6">
-    <h2 class="text-3xl font-bold text-center mb-10">Experience</h2>
-    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-      <div class="card bg-white bg-opacity-10 p-6 rounded-lg" data-aos="fade-right">
-        <h3 class="text-xl font-semibold">TechBulls Softech</h3>
-        <p class="italic text-sm mb-2">Senior Software Engineer (Nov 2022 – Present)</p>
-        <ul class="list-disc list-inside text-sm text-gray-200">
-          <li>Python APIs for PLM data integration on GCP</li>
-          <li>Event-driven pipelines using RabbitMQ, Solace</li>
+  <section id="experience" class="py-16 px-4">
+    <h2 class="text-3xl font-bold text-center text-pink-500 mb-8">Professional Experience</h2>
+    <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-6">
+      <div class="card bg-gray-800 p-6 rounded-lg" data-aos="fade-up">
+        <h3 class="text-xl font-semibold text-pink-500">Senior Software Engineer</h3>
+        <p class="text-blue-400 font-medium">TechBulls Softech, Pune</p>
+        <p class="italic text-sm mb-2">Nov 2022 – Present</p>
+        <ul class="list-disc pl-5 text-sm text-gray-200">
+          <li>Built scalable APIs with GCP Cloud Run</li>
+          <li>Used Solace & RabbitMQ for data pipelines</li>
         </ul>
       </div>
-      <div class="card bg-white bg-opacity-10 p-6 rounded-lg" data-aos="fade-right" data-aos-delay="100">
-        <h3 class="text-xl font-semibold">Infrrd.ai</h3>
-        <p class="italic text-sm mb-2">Software Engineer (Mar 2022 – Nov 2022)</p>
-        <ul class="list-disc list-inside text-sm text-gray-200">
-          <li>Flask APIs and document processing automation</li>
+      <div class="card bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="100">
+        <h3 class="text-xl font-semibold text-pink-500">Software Engineer</h3>
+        <p class="text-blue-400 font-medium">Infrrd.ai, Bangalore</p>
+        <p class="italic text-sm mb-2">Mar 2022 – Nov 2022</p>
+        <ul class="list-disc pl-5 text-sm text-gray-200">
+          <li>Python + Flask APIs for mortgage processing</li>
+          <li>Rapid POCs with MongoDB</li>
+        </ul>
+      </div>
+      <div class="card bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
+        <h3 class="text-xl font-semibold text-pink-500">Solution Developer</h3>
+        <p class="text-blue-400 font-medium">Tata Technologies, Pune</p>
+        <p class="italic text-sm mb-2">May 2021 – Mar 2022</p>
+        <ul class="list-disc pl-5 text-sm text-gray-200">
+          <li>Django/Postgres app enhancements</li>
+          <li>SOLR and API performance tuning</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <!-- Education -->
-  <section id="education" class="py-16 px-6 bg-white text-gray-800">
-    <h2 class="text-3xl font-bold text-center mb-6">Education</h2>
-    <div class="text-center">
-      <p class="font-semibold">B.E. Information Technology</p>
-      <p>Sanjivani College of Engineering, SPPU, 2018</p>
+  <!-- Achievements -->
+  <section id="achievements" class="py-16 px-4 bg-black bg-opacity-30">
+    <h2 class="text-3xl font-bold text-center text-pink-500 mb-8">Education & Certifications</h2>
+    <div class="max-w-4xl mx-auto grid md:grid-cols-3 gap-6">
+      <div class="card bg-gray-800 p-4 rounded-lg">
+        <h3 class="font-bold text-pink-500 mb-2">Education</h3>
+        <p>Sanjivani COE, SPPU</p>
+        <p>B.E. IT, 2018</p>
+      </div>
+      <div class="card bg-gray-800 p-4 rounded-lg">
+        <h3 class="font-bold text-pink-500 mb-2">Certifications</h3>
+        <p>HackerRank Python Skill Test</p>
+        <p>ID: D757F33A9280</p>
+      </div>
+      <div class="card bg-gray-800 p-4 rounded-lg">
+        <h3 class="font-bold text-pink-500 mb-2">Awards</h3>
+        <p>Best Outgoing Student</p>
+        <p>Dept. of IT, 2017-18</p>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
-  <section id="contact" class="py-16 px-6">
-    <h2 class="text-3xl font-bold text-center mb-8">Get In Touch</h2>
-    <form class="max-w-xl mx-auto space-y-4" action="mailto:agondhale30@gmail.com" method="POST" enctype="text/plain">
-      <input class="w-full p-3 border rounded bg-white text-black" type="text" name="Name" placeholder="Your Name" required />
-      <input class="w-full p-3 border rounded bg-white text-black" type="email" name="Email" placeholder="Your Email" required />
-      <textarea class="w-full p-3 border rounded bg-white text-black" name="Message" rows="5" placeholder="Your Message"></textarea>
-      <button class="bg-indigo-600 text-white py-2 px-6 rounded hover:bg-indigo-700" type="submit">
-        ✉ Send
-      </button>
-    </form>
+  <section id="contact" class="py-16 px-4">
+    <h2 class="text-3xl font-bold text-center text-pink-500 mb-6">Get In Touch</h2>
+    <div class="flex flex-col md:flex-row justify-center gap-8 text-center max-w-4xl mx-auto">
+      <div class="card bg-gray-800 p-6 rounded-lg">
+        <p class="text-pink-400 text-xl icon-animate">📧</p>
+        <p class="text-blue-400 font-bold">Email</p>
+        <p>agondhale30@gmail.com</p>
+      </div>
+      <div class="card bg-gray-800 p-6 rounded-lg">
+        <p class="text-pink-400 text-xl icon-animate">📞</p>
+        <p class="text-blue-400 font-bold">Phone</p>
+        <p>+91-8446393585</p>
+      </div>
+      <div class="card bg-gray-800 p-6 rounded-lg">
+        <p class="text-pink-400 text-xl icon-animate">📍</p>
+        <p class="text-blue-400 font-bold">Location</p>
+        <p>Pune, India</p>
+      </div>
+    </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-4 text-center text-sm bg-gradient-to-r from-purple-600 to-indigo-600 text-white">
-    © 2025 Akash Gondhale. All rights reserved.
+  <footer class="py-6 text-center text-sm text-gray-300 bg-black bg-opacity-40">
+    <p>© 2025 Akash Gondhale. All rights reserved.</p>
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
