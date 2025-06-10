@@ -35,16 +35,6 @@
     <p class="max-w-2xl mt-4 text-white" data-aos="fade-up" data-aos-delay="250">
       Results-driven Backend Developer with 5+ years of experience in APIs, cloud, and automation. Passionate about building maintainable, scalable solutions.
     </p>
-    <div class="flex justify-center gap-4 mt-6 flex-wrap">
-      <a href="assets/cover-letter.pdf" target="_blank"
-         class="flex items-center gap-2 bg-pink-500 text-white px-5 py-2 rounded hover:bg-pink-600 transition">
-        📃 View Cover Letter
-      </a>
-      <a href="assets/resume.pdf" target="_blank"
-         class="flex items-center gap-2 bg-indigo-600 text-white px-5 py-2 rounded hover:bg-indigo-700 transition">
-        📄 View Resume
-      </a>
-    </div>
   </section>
 
   <!-- About & Skills -->
@@ -102,15 +92,6 @@
           <li>SOLR and API performance tuning</li>
         </ul>
       </div>
-      <div class="card bg-gray-800 p-6 rounded-lg" data-aos="fade-up" data-aos-delay="200">
-        <h3 class="text-xl font-semibold text-pink-500">Solution Developer</h3>
-        <p class="text-blue-400 font-medium">Tata Technologies, Pune</p>
-        <p class="italic text-sm mb-2">May 2021 – Mar 2022</p>
-        <ul class="list-disc pl-5 text-sm text-gray-200">
-          <li>Django/Postgres app enhancements</li>
-          <li>SOLR and API performance tuning</li>
-        </ul>
-      </div>
     </div>
   </section>
 
@@ -157,6 +138,35 @@
       </div>
     </div>
   </section>
+<!--  <section id="documents" class="py-16 px-4 bg-gray-100 dark:bg-gray-200 text-gray-900 dark:text-black">-->
+<!--  <div class="max-w-6xl mx-auto">-->
+<!--    <h2 class="text-3xl font-bold text-center text-pink-500 dark:text-indigo-600 mb-10">Documents</h2>-->
+
+<!--    <div class="grid md:grid-cols-2 gap-8">-->
+<!--      &lt;!&ndash; Resume Preview &ndash;&gt;-->
+<!--      <div>-->
+<!--        <h3 class="text-xl font-semibold mb-4">📄 Resume</h3>-->
+<!--        <div class="aspect-w-3 aspect-h-4 bg-white shadow-md rounded overflow-hidden">-->
+<!--          <iframe src="assets/Akash_Gondhale_6yrs_2025.pdf" class="w-full h-96 border" title="Resume PDF"></iframe>-->
+<!--        </div>-->
+<!--        <a href="assets/Akash_Gondhale_6yrs_2025.pdf" download class="inline-block mt-4 bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition">-->
+<!--          Download Resume-->
+<!--        </a>-->
+<!--      </div>-->
+
+<!--      &lt;!&ndash; Cover Letter Preview &ndash;&gt;-->
+<!--      <div>-->
+<!--        <h3 class="text-xl font-semibold mb-4">📃 Cover Letter</h3>-->
+<!--        <div class="aspect-w-3 aspect-h-4 bg-white shadow-md rounded overflow-hidden">-->
+<!--          <iframe src="assets/Cover_letter_2025.pdf" class="w-full h-96 border" title="Cover Letter PDF"></iframe>-->
+<!--        </div>-->
+<!--        <a href="assets/Cover_letter_2025.pdf" download class="inline-block mt-4 bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600 transition">-->
+<!--          Download Cover Letter-->
+<!--        </a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</section>-->
   <!-- Footer -->
   <footer class="py-6 text-center text-sm text-gray-300 bg-black bg-opacity-40">
     <p>© 2025 Akash Gondhale. All rights reserved.</p>
@@ -170,8 +180,8 @@
     const iframe = document.getElementById("pdf-frame");
 
     const fileMap = {
-      resume: "assets/resume.pdf",
-      cover: "assets/cover-letter.pdf"
+      resume: "assets/Akash_Gondhale_6yrs_2025.pdf",
+      cover: "assets/Cover_letter_2025.pdf"
     };
 
     iframe.src = fileMap[doc];
@@ -189,19 +199,10 @@
   }
 </script>
 <!-- PDF Modal -->
-<div id="pdf-modal" class="fixed inset-0 z-50 bg-black bg-opacity-80 hidden justify-center items-center">
-  <div class="relative w-full h-screen bg-white dark:bg-gray-100 rounded-none">
-    <!-- Close Button -->
-    <button onclick="closeModal()" class="absolute top-4 right-6 text-3xl font-bold text-gray-500 hover:text-red-600 z-50">×</button>
-
-    <!-- Fullscreen PDF Iframe -->
-    <iframe
-      id="pdf-frame"
-      class="w-full h-full"
-      frameborder="0"
-      allowfullscreen
-      src="">
-    </iframe>
+<div id="pdf-modal" class="fixed inset-0 bg-black bg-opacity-70 z-50 hidden justify-center items-center">
+  <div class="bg-white w-11/12 md:w-3/4 lg:w-2/3 h-[90vh] rounded-lg shadow-lg relative flex flex-col">
+    <button onclick="closeModal()" class="absolute top-3 right-4 text-gray-500 hover:text-red-500 text-xl font-bold">×</button>
+    <iframe id="pdf-frame" class="w-full h-full rounded-b-lg" src="" frameborder="0"></iframe>
   </div>
 </div>
 </body>
